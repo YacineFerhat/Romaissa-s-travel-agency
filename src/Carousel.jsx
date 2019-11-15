@@ -7,6 +7,9 @@ import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
 const Carousel  = () => {
     const donnee =  data
     const [index, setIndex] = useState(0)
+    const changeIndex = () => {
+
+    }
     return(
         <div style={{background:`url(${data[index].picture}) center/cover`,transition:'1s', width:'100%', height:'700px'}}>
             <h1 className="title is-2 has-text-black " style={{position:'relative', top:'30%'}}>
@@ -17,14 +20,14 @@ const Carousel  = () => {
             </h1>
             {
                 index  > 0 && index < 3  ? 
-                <ArrowBackIosIcon onClick={()=>setIndex(index-1)} fontSize="large" style={{position:'relative',color:index===0 || 1 ? 'white' : 'black' , top:'270px', right:'650px'}}/>
+                <ArrowBackIosIcon onClick={()=>setIndex(index-1)} fontSize="large" style={{position:'relative',color:index===0 || 1 ? 'white' : 'black' , top:'270px', right:'450px'}}/>
                 :
                  null
             }
             
             {
                 index < 2 ?
-                <ArrowForwardIosIcon onClick={()=>setIndex(index+1)} fontSize="large" style={{position:'relative', color:index===0 || 1 ? 'white' : 'black',top:'270px', left:'650px'}}/>
+                <ArrowForwardIosIcon onClick={()=>setIndex(index+1)} fontSize="large" style={{position:'relative', color:index===0 || 1 ? 'white' : 'black',top:'270px', left:'450px'}}/>
                 : null
             }
             </div>
