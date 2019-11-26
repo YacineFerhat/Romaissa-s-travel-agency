@@ -1,16 +1,14 @@
 import React , {useState} from 'react';
-
+import Logo from './Logo.png'
 const Navbar = () => {
     const [toggle, handleToggle] =  useState(false)
     return(
-        <nav className="navbar is-transparent is-fixed-top" role="navigation" aria-label="main navigation">
+        <nav className="navbar is-transparent is-fixed-top" style={{backgroundColor:'white'}} role="navigation" aria-label="main navigation">
             <div className="navbar-brand">
-                <a className="navbar-item">
-                    <h1 className="title is-4">
-                        Romaissa Tour
-                    </h1>
-                </a>
-
+                <figure className=" navbar-item image">
+                    <img style={{height:'100%', width:'100px'}} src={Logo} />
+                </figure>
+               
                 <a role="button" onClick={()=>handleToggle(!toggle)} className="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
                     <span aria-hidden="true"></span>
                     <span aria-hidden="true"></span>

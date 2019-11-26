@@ -13,7 +13,7 @@ const Carousel  = () => {
     return(
         <div style={{background:`url(${data[index].picture}) center/cover`,transition:'1s', width:'100%', height:'700px'}}>
             <h1 className="title is-2 has-text-black " style={{position:'relative', top:'30%'}}>
-                Explorer le monde avec Romaissa tour! 
+            اكتشف سحر العالم معنا
             </h1>
             <h1 className="title is-2" style={{color: index === 1 ? 'black' : 'white' ,position:'relative',top:'40%' }}>
                 {donnee[index].name}
